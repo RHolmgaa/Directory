@@ -1,3 +1,4 @@
+#Written by Rasmus Holmgaard
 Write-Host "Paste in the root folder" -ForegroundColor Yellow
 $RootFolder = Read-Host
 Write-Host "Where should the audit export" -ForegroundColor Yellow
