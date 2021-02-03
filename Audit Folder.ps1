@@ -26,7 +26,7 @@ foreach ($RootAccessObject in $RootAcl.Access) {
     $Report | Export-Csv -Path $Path -Force -Append -NoTypeInformation
 }
 
-#Create a report for each User/Group - subfolder (Will put the information in the already created reports.)
+#Create a report for each User/Group - subfolder
 Get-ChildItem -Path $RootFolder -Directory -Recurse -Force | select FullName | ForEach-Object {
     Write-Host $_.FullName
     $SubAcl = Get-Acl $_.FullName
